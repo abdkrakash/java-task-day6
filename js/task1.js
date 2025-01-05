@@ -7,15 +7,32 @@ document.getElementById("register-form").addEventListener("submit", (event) => {
     
         return `${year}/${month}/${day}`;
     }
+
     event.preventDefault();
   document.getElementById("usernameError").innerHTML = "";
-  document.getElementById("passwordError").innerTextr = "";
-  document.getElementById("confirmPasswordError").innerTextr = "";
+  document.getElementById("passwordError").innerHTML = "";
+  document.getElementById("confirmPasswordError").innerHTML = "";
 
   const username = document.getElementById('username');
-  if(username.value.trim()== "")
+  if(username.value.trim() == "")
   {
     document.getElementById("usernameError").innerHTML =formatDate() + "required";
   }
+
+  const password = document.getElementById("password");
+if (password.value.trim() == "")
+{
+  document.getElementById("passwordError").innerHTML="required"
+}
+
+const confirmPassword= document.getElementById("confirmPassword");
+if (confirmPassword.value.trim( ) == "")
+{
+  document.getElementById("confirmPasswordError").innerHTML="required"
+}
+
 });
+
+
+
 
